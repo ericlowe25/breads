@@ -15,7 +15,9 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views') .createEngine())
 // show request middleware
 app.use(express.static('public'))
-//
+// POST request middleware
+app.use(express.urlencoded({extended: true}))
+
 
 // ROUTES
 app.get('/',(reg, res) => {
