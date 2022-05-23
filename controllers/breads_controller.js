@@ -4,8 +4,14 @@ const Bread = require('../models/bread.js')
 
 // INDEX
 breads.get('/', (req, res) => {
-    res.render('index', {breads: Bread})
-    // res.send('Bread')
+     // res.send('Bread')
+    res.render('index', 
+      {
+        breads: Bread, 
+        title: 'Idex Page' 
+      }
+    )
+   
 })
 
 // SHOW
