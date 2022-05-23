@@ -1,4 +1,5 @@
-// 
+// DEPENDENCIES
+const methodOverride = require('method-override')
 const express = require('express')
 const res = require('express/lib/response')
 
@@ -17,6 +18,9 @@ app.engine('jsx', require('express-react-views') .createEngine())
 app.use(express.static('public'))
 // POST request middleware
 app.use(express.urlencoded({extended: true}))
+// override- delete request middleware
+app.use(methodOverride('method'))
+
 
 
 // ROUTES
