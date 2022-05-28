@@ -17,7 +17,10 @@ function New () {
           <input
             type="text"
             name="image"
-            id="image"/>
+            pattern="https?://.+" title="Include http://"
+            id="image"
+            required
+            />
           <label htmlFor="hasGluten">Has Gluten?</label>
           <input
             type="checkbox"
